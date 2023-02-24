@@ -1,6 +1,9 @@
-<h1>Create List</h1>
+<div class="container text-center">
+  <h1>Create List</h1>
 
-<%= simple_form_for @list_new do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Create List" %>
-<% end %>
+  <%= simple_form_for @list_new do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file, label: false %>
+    <%= f.submit "Create List" %>
+  <% end %>
+</div>

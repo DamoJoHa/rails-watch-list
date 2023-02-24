@@ -15,9 +15,11 @@
 ol {
   padding: 0;
 }
-.form_flex > form {
-  display: flex;
-  align-items: center;
+.form_flex{
+  form {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .form_flex > form input.form-control {
@@ -26,4 +28,14 @@ ol {
 
 .shadowed {
   box-shadow: 3px 3px 10px rgba($color: #565454, $alpha: 0.3);
+}
+
+.list-header {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    text-shadow: 5px 5px 10px black;
+  }
 }

@@ -11,19 +11,18 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-dark mb-3">
+    <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <%= link_to "ScuffedLists", lists_path, class:"navbar-brand" %>
         <div class="form_flex">
           <%= simple_form_for @list_new do |f| %>
-            <%= f.input :name, class: "form-control mt-3", label: false %>
+            <%= f.input :name, label: false, placeholder: "List Name" %>
+            <%= f.input :photo, as: :file, label: false %>
             <%= f.submit "Create List", class: "btn btn-outline-success"%>
           <% end %>
         </div>
       </div>
     </nav>
-    <div class="container text-center">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>
