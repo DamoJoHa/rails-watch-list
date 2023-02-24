@@ -11,3 +11,19 @@
 @import "components/index";
 @import "pages/index";
 
+
+ol {
+  padding: 0;
+}
+.form_flex > form {
+  display: flex;
+  align-items: center;
+}
+
+.form_flex > form input.form-control {
+  margin-top: 16px;
+}
+
+.shadowed {
+  box-shadow: 3px 3px 10px rgba($color: #565454, $alpha: 0.3);
+}

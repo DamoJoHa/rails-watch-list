@@ -12,8 +12,14 @@
 
   <body>
     <nav class="navbar navbar-dark bg-dark mb-3">
-      <div class="container-fluid">
-        <%= link_to "MyLists", lists_path, class:"navbar-brand" %>
+      <div class="container">
+        <%= link_to "ScuffedLists", lists_path, class:"navbar-brand" %>
+        <div class="form_flex">
+          <%= simple_form_for @list_new do |f| %>
+            <%= f.input :name, class: "form-control mt-3", label: false %>
+            <%= f.submit "Create List", class: "btn btn-outline-success"%>
+          <% end %>
+        </div>
       </div>
     </nav>
     <div class="container text-center">

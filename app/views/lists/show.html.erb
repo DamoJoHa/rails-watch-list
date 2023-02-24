@@ -1,8 +1,8 @@
 <h1><%= @list.name %></h1>
 
-<ol class="d-flex">
+<ol class="d-flex flex-wrap justify-content-around">
   <% @bookmarks.each do |bm| %>
-    <li class="card" style="width: 18rem">
+    <li class="card shadowed m-3" style="width: 18rem">
       <%= image_tag bm.movie.poster_url, class: "card-img-top" %>
       <div class="card-body">
         <h5 class="card-title"><%= bm.movie.title %></h5>
