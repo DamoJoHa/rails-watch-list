@@ -11,6 +11,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-dark bg-dark mb-3">
+      <div class="container-fluid">
+        <%= link_to "MyLists", lists_path, class:"navbar-brand" %>
+      </div>
+    </nav>
+    <div class="container text-center">
+      <%= yield %>
+    </div>
   </body>
 </html>

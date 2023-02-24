@@ -1,1 +1,16 @@
 <h1><%= @list.name %></h1>
+
+<ol class="d-flex">
+  <% @bookmarks.each do |bm| %>
+    <li class="card" style="width: 18rem">
+      <%= image_tag bm.movie.poster_url, class: "card-img-top" %>
+      <div class="card-body">
+        <h5 class="card-title"><%= bm.movie.title %></h5>
+        <p class="card-text"><%= bm.comment %></p>
+        <%= link_to "Delete", bookmark_path(bm), data: { turbo_method: :delete, turbo_confirm: "Delete bookmark?" }, class: "btn btn-danger" %>
+      </div>
+    </li>
+  <% end %>
+</ol>
+
+<%= link_to "Add film", new_list_bookmark_path(@list), class: "btn btn-primary"%>
